@@ -1,0 +1,33 @@
+= Doodle backend coding challenge
+Solution to the doodle backend engineer challenge.
+
+== Introduction
+
+A backend system that supports querying polls(events) based on creator, creation date, and event title.
+
+== Tech stack
+
+The following technologies have been used -reasoning:
+* Spring boot: a proven framework with extensive support and modules, easy integration, many off-the-shelf features, rapid spin-up time - all this means we can focus on the business logic of our application.
+* (Web)flux: reactive webserver * spring-boot-actuator: metrics and health-checks off-the-shelf & easy integration with proven technologies (ELK stack).
+* mongodb -embedded: nosql data layer, in-memory-embedded (rapid solution).
+
+=== Why reactive?
+
+* performance – due to the possibility to handle huge volumes of data in a quick and stable way.
+* Improved UX – due to the possibility to keep the application more responsive to its user.
+* Simplified modifications and updates – due to more readable and easier to predict code.
+
+The term, “reactive,” refers to programming models that are built around reacting to change — network components reacting to I/O events, UI controllers reacting to mouse events, and others.
+In that sense, non-blocking is reactive, because, instead of being blocked, we are now in the mode of reacting to notifications as operations complete or data becomes available.
+
+=== Why nosql?
+
+* Semi-structured data
+* Dynamic or flexible schema
+* No need for complex joins
+* No strong ACID requirement (eventually consistency is good enough)
+* Store many TB (or PB) of data (say future?)
+* Very high throughput for IOPS
+* Document store can capture our business logic (poll storage) - easy priming of our db from polls.json
+
