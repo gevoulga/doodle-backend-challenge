@@ -39,3 +39,4 @@ In that sense, non-blocking is reactive, because, instead of being blocked, we a
 * Sharding, db indices, caching (redis?) -for when load increases
 * multiple server instances, load balancing, circuit breakers, look-up service & registration, health checks (spring cloud - eureka, ribbon, hystrix)
 * Integrate with ELK stack -supporting production system
+* Finish-off docker configuration
