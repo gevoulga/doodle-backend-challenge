@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: doodle-test
+
+datasource:
+  primer: "classpath:polls.json"
+#    driverClassName: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://localhost/test
+
+
+server:
+  port: 9000

@@ -31,3 +31,5 @@ In that sense, non-blocking is reactive, because, instead of being blocked, we a
 * Very high throughput for IOPS
 * Document store can capture our business logic (poll storage) - easy priming of our db from polls.json
 
+== Potential improvements
+* Pagination (queries to db can having sorting/paging  defined to reduce wasting compute power)
