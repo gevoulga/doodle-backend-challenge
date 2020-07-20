@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -21,6 +22,8 @@ public class RestController {
         this.pollService = pollService;
     }
 
+    //Maybe it should have been a request param as well, since we are dealing with names directly, which can be long (instead of userId)
+    //Yet the point I am trying to make here is that there are 2 approaches we can use (compared with search by title)
     @GetMapping("/user/{name}")
     public Flux<Poll> listPollsForUser(@PathVariable String name) {
         User user = User.builder()
@@ -29,8 +32,8 @@ public class RestController {
         return pollService.findForUser(user);
     }
 
-    @GetMapping("/title/{title}")
-    public Mono<Poll> searchByTitle(@PathVariable String title) {
+    @GetMapping()
+    public Mono<Poll> searchByTitle(@RequestParam String title) {
         return pollService.findForTitle(title);
     }
 

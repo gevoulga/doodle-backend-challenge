@@ -34,7 +34,6 @@ In that sense, non-blocking is reactive, because, instead of being blocked, we a
 == Potential improvements
 
 * Extending the schema/model
-* Special characters (ie ?)
 * Using federation (user service) -no deduplication of user data
 * Pagination (queries to db can having sorting/paging defined to reduce wasting compute power)
 * Sharding, db indices, caching (redis?) -for when load increases
