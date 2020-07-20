@@ -1,22 +1,20 @@
 package ch.voulgarakis.doodle.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.ToString;
+import lombok.*;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
-import java.time.Instant;
 
 @Data
 @Builder
+@NoArgsConstructor
 @AllArgsConstructor
 @Document
 @ToString
 public class Poll {
 
+    @Id
     private String id;
-    private Instant initiated;
+    private long initiated;
     private String title;
     private User initiator;
 //    "id": "xsd4cv89t5f5um4b",

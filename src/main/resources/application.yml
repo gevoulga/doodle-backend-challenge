@@ -10,3 +10,7 @@ datasource:
 
 server:
   port: 9000
+
+#Logging configuration
+logging.level:
+  org.springframework.data.mongodb.core.ReactiveMongoTemplate:  DEBUG

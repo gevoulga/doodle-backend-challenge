@@ -1,14 +1,12 @@
 package ch.voulgarakis.doodle.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.ToString;
+import lombok.*;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
 @Document
 @ToString
 public class User {
